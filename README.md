@@ -56,7 +56,7 @@ Use `MongoDB` for storage.
 `thermos/temperature/in` => `thermos/temperature/out`  
 Response: `<float>`
 
-#### State
+#### Status
 `thermos/status/in` => `thermos/status/out`  
 Response:
 ```js
@@ -69,6 +69,14 @@ Response:
       "humidity": <float>,
       "timestamp": <ISODate>
     }, ...
+  ],
+  "overrides": [ //active or upcoming overrides
+    {
+      "id": <int>,
+      "from": <ISODate>,
+      "to": <ISODate>,
+      "interval": <int>
+    }
   ],
   "heating": {
     "value": <bool>,
@@ -123,14 +131,6 @@ Respond with:
     {
       "target": <float>,
       "program": <String>,
-      "overrides": [ //active or upcoming overrides
-        {
-          "id": <int>,
-          "from": <ISODate>,
-          "to": <ISODate>,
-          "interval": <int>
-        }
-      ],
       "sensors": [
         {
           "id": <String>,
@@ -147,7 +147,7 @@ Respond with:
 
 ### Logger
 Listens on `log/#` (`log/error`, `log/warn`, `log/debug`)
-Other agents can publish logs to thos topics.  
+Other agents can publish logs to those topics.  
 The logger can store them or take actions (e.g. send email) based on the received messages.
 ```js
 {
