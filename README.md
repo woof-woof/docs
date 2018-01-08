@@ -137,5 +137,21 @@ Respond with:
 }
 ```
 
+### Logger
+Listens on `log/#` (`log/error`, `log/warn`, `log/debug`)
+Other agents can publish logs to thos topics.  
+The logger can store them or take actions (e.g. send email) based on the received messages.
+```js
+{
+  "agent": <string>, //agent name & id
+  "timestamp": <ISODate>,
+  "message": <String>,
+  "data": <Object>, //optional
+}
+```
+
+Listens on `logger/in`  
+Outputs on `logger/out`  
+TODO
 
 
