@@ -123,6 +123,14 @@ Respond with:
     {
       "target": <float>,
       "program": <String>,
+      "overrides": [ //active or upcoming overrides
+        {
+          "id": <int>,
+          "from": <ISODate>,
+          "to": <ISODate>,
+          "interval": <int>
+        }
+      ],
       "sensors": [
         {
           "id": <String>,
