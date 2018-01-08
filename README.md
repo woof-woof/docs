@@ -52,11 +52,7 @@ On state change, toggles heating if needed.
 Force update when state is outdated.  
 Use `MongoDB` for storage. 
 
-##### Target temperature(pub-sub)
-`thermos/temperature/in` => `thermos/temperature/out`  
-Response: `<float>`
-
-#### Status
+##### Status
 `thermos/status/in` => `thermos/status/out`  
 Response:
 ```js
