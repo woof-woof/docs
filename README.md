@@ -80,6 +80,30 @@ Response:
 }
 ```
 
+##### Schedules get
+`thermos/schedules/get/in` => `thermos/schedules/get/out`
+Request: null  
+Response:
+```js
+{
+  <string>(schedule ID): <ScheduleData>,
+  ...
+}
+```
+For `<ScheduleData>` structure, see: https://github.com/woof-woof/temperature-config-parser
+
+##### Schedule set
+`thermos/schedules/set/in` => `thermos/schedules/*get*/out`
+Request:
+```js
+{
+  scheduleId: <ScheduleData>,
+  ...
+}
+```
+Response: See Schedules-get
+
+
 ##### Override(req-res)
 `thermos/override` => replyTo  
 Override thermostat:
