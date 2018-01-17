@@ -50,7 +50,6 @@ Respond on `switches/heating/out` with: `1` or `0` (on any valid message receive
 Listens on `thermos/#`  
 On state change, toggles heating if needed.  
 Force update when state is outdated.  
-Use `SQLite` for storage. 
 
 ##### Status
 `thermos/status/in` => `thermos/status/out`  
