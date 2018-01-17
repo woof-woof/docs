@@ -42,7 +42,7 @@ Respond on `sensors/temperature/out` with:
 
 #### Binary heating control (on/off)
 Toggles heating (relay, switch) on/off  
-Listen on `switches/heating/in` with: `on`, `off` or `state`  
+Listen on `switches/heating/in` with: `on`, `off` or `status`  
 Respond on `switches/heating/out` with: `1` or `0` (on any valid message received)
 
 
